@@ -1,0 +1,602 @@
+[
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-136_Q1",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear does not chase the lion. The bear visits the lion. The bear visits the tiger. The lion chases the bear. The lion chases the tiger. The lion visits the bear. The rabbit chases the tiger. The rabbit is big. The rabbit is not green. The rabbit is young. The rabbit visits the tiger. The tiger chases the rabbit. The tiger is rough. The tiger visits the bear. If something chases the bear and it sees the rabbit then the bear does not visit the rabbit. If something chases the lion then the lion is rough. If the rabbit chases the tiger and the tiger visits the rabbit then the rabbit is not big. If something chases the lion then the lion does not visit the tiger. If something chases the rabbit and it chases the tiger then the rabbit chases the bear. If something is young and it does not see the rabbit then it sees the bear. If something visits the lion then it is young. If the tiger visits the bear and the bear is big then the tiger visits the lion. Young things are big.\nQuestion: The bear visits the lion.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-99_Q17",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle is cold. The bald eagle sees the bear. The bear is big. The bear is not cold. The bear is green. The bear likes the cat. The cat chases the mouse. The cat is big. The cat is young. The cat likes the bald eagle. The mouse likes the cat. If something chases the cat and it likes the bald eagle then the bald eagle is not green. If something sees the cat then it does not chase the mouse. If something is cold then it sees the cat. If something likes the cat and it chases the bald eagle then it is not young. If something likes the bald eagle and the bald eagle does not chase the mouse then the mouse is big. If the cat chases the bear then the cat likes the mouse. If something chases the mouse and it is not green then it chases the bear. If the mouse is big then the mouse chases the bald eagle. If something is young and it likes the mouse then it chases the bald eagle.\nQuestion: The bald eagle does not chase the bear.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-295_Q20",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle needs the lion. The bald eagle needs the mouse. The bear likes the bald eagle. The bear needs the lion. The bear sees the bald eagle. The lion is blue. The mouse sees the bear. If something sees the lion then it likes the bald eagle. If something likes the bear then it likes the bald eagle. If something needs the bear and the bear is blue then the bear is round. If something likes the mouse then the mouse sees the bear. If something likes the mouse and the mouse is nice then it likes the bear. If something needs the lion and it likes the bald eagle then it likes the mouse. If something likes the bear and it likes the mouse then the mouse needs the bear. If something needs the bear then it likes the bear. If something likes the bald eagle then it needs the bear.\nQuestion: The bald eagle sees the bear.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-1040_Q9",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is cold. Bob is not nice. Bob is not quiet. Charlie is blue. Charlie is round. Gary is rough. Harry is cold. Rough things are blue. Red, quiet things are blue. All rough, blue things are nice. If something is quiet and round then it is not nice. If Harry is red then Harry is rough. If something is nice then it is round. If something is round then it is red. Red things are not quiet.\nQuestion: Gary is red.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-19_Q18",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear needs the cow. The cow needs the rabbit. The cow sees the bear. The cow visits the lion. The lion is nice. The lion is red. The lion does not see the cow. The lion visits the cow. The rabbit sees the cow. The rabbit visits the cow. If something needs the cow and the cow visits the rabbit then it visits the cow. If the lion needs the bear then the bear sees the cow. If the lion sees the bear and the bear is rough then the bear does not see the cow. If something visits the lion then the lion visits the bear. If something visits the bear then it needs the bear. If something visits the bear then the bear needs the cow. If something sees the cow then it visits the bear.\nQuestion: The rabbit is rough.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-1213_Q11",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is white. Bob is round. Erin is green. Erin is red. Erin is not round. Erin is white. Harry is young. All red, round people are quiet. If someone is young then they are white. Round people are young. If someone is round and smart then they are not red. All white people are red. Quiet people are green. If someone is red and not white then they are not green.\nQuestion: Bob is green.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-527_Q9",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is quiet. Charlie is blue. Charlie is cold. Charlie is nice. Dave is blue. Dave is cold. Erin is blue. If something is blue and cold then it is big. Round, nice things are big. All nice, quiet things are furry. If Bob is round then Bob is furry. If Bob is furry and Bob is nice then Bob is big. If something is big and blue then it is quiet. If something is blue then it is nice. All nice things are cold.\nQuestion: Erin is quiet.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-607_Q15",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Dave is big. Erin is big. Erin is furry. Erin is green. Erin is white. Gary is green. Harry is round. All big, furry things are white. If something is round then it is furry. If something is smart and furry then it is round. If something is white and smart then it is big. All white things are smart. If something is furry then it is white. All green things are round.\nQuestion: Dave is not white.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-1382_Q2",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is big. Bob is cold. Bob is kind. Bob is round. Bob is smart. Dave is cold. Erin is big. Erin is green. Fiona is big. Fiona is smart. Big, green things are round. If something is cold and blue then it is smart. Smart, round things are kind. Round, big things are cold. Cold things are blue.\nQuestion: Bob is not big.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-698_Q16",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is big. Bob is red. Bob is smart. Erin is quiet. Fiona is big. Fiona is blue. Fiona is cold. Fiona is smart. Gary is red. Gary is smart. If Bob is quiet then Bob is cold. If someone is red then they are quiet. If someone is red and quiet then they are cold. All kind people are big. If someone is red and blue then they are kind. All cold, quiet people are blue. Cold, big people are kind. If Erin is big then Erin is cold. If someone is cold and blue then they are smart.\nQuestion: Erin is cold.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-339_Q5",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle chases the cat. The bald eagle is kind. The bald eagle sees the dog. The cat is rough. The dog is blue. The dog is red. The dog is rough. The dog sees the cat. The dog does not see the lion. The lion sees the bald eagle. If something chases the cat then the cat chases the dog. If something chases the dog then it eats the bald eagle. If something is kind and it sees the lion then it is not red. If something chases the dog then the dog chases the bald eagle. If the dog eats the bald eagle then the dog sees the bald eagle. If something is cold then it sees the lion. If something sees the cat and it is blue then the cat is kind. If something is blue and it chases the bald eagle then the bald eagle is cold.\nQuestion: The cat eats the bald eagle.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-73_Q20",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is nice. Bob is cold. Bob is not red. Bob is rough. Charlie is red. Charlie is rough. Harry is nice. Harry is quiet. Harry is rough. Harry is round. Nice people are quiet. If someone is red and nice then they are not quiet. Quiet people are cold. If someone is quiet and round then they are not red. If someone is green and quiet then they are round. If someone is cold then they are green.\nQuestion: Anne is rough.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-1026_Q3",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear is green. The bear visits the cow. The cat is green. The cat is nice. The cow likes the cat. The cow visits the lion. The lion visits the cat. If someone visits the cow then the cow eats the lion. If someone eats the bear then the bear visits the cat. If someone is young then they eat the bear. If someone is blue then they eat the bear. If someone likes the lion then they are young. If the lion is nice then the lion eats the bear. If someone eats the lion then they like the lion. If someone is green then they eat the cat.\nQuestion: The cat eats the cat.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-976_Q12",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Charlie is not quiet. Erin is big. Erin is white. Erin is young. Gary is young. Harry is furry. Harry is nice. White, furry people are big. All nice people are big. If someone is quiet and furry then they are white. If someone is young then they are quiet. All big, furry people are round. If someone is quiet then they are furry. If Erin is round then Erin is quiet.\nQuestion: Gary is not round.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-669_Q24",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The dog eats the mouse. The dog eats the tiger. The dog visits the squirrel. The mouse is green. The mouse visits the tiger. The squirrel is big. The squirrel is round. The squirrel likes the dog. The tiger eats the dog. The tiger visits the mouse. If someone eats the tiger and the tiger is big then they are green. If someone is green then they like the squirrel. If the dog is green then the dog likes the mouse. If someone visits the tiger then the tiger is blue. If someone visits the tiger then the tiger visits the dog. If someone is blue and they eat the squirrel then the squirrel is green. If someone is blue then they eat the squirrel. If someone likes the dog and they are green then they are blue.\nQuestion: The mouse is cold.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-686_Q17",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is quiet. Bob is not red. Bob is round. Charlie is red. Gary is quiet. Gary is not round. Gary is not smart. Gary is white. Harry is blue. Harry is quiet. If Harry is blue and Harry is white then Harry is red. Smart things are young. All quiet, red things are round. If Charlie is quiet then Charlie is round. If something is quiet then it is white. If Gary is blue and Gary is smart then Gary is quiet. All young, blue things are quiet. All round things are smart.\nQuestion: Charlie is not smart.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-742_Q11",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is furry. Anne is red. Anne is smart. Bob is red. Dave is blue. Dave is kind. Erin is white. Furry people are kind. Furry, blue people are kind. All red people are furry. All nice, red people are smart. Kind, nice people are smart. All furry people are kind. White people are kind. If someone is white and red then they are nice. If Bob is kind then Bob is white.\nQuestion: Bob is smart.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-164_Q22",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is cold. Bob is nice. Fiona is big. Fiona is round. Harry is big. Harry is nice. Harry is smart. All smart people are round. If Anne is kind then Anne is big. All smart, big people are furry. All nice people are kind. Kind, round people are big. If someone is kind then they are smart.\nQuestion: Fiona is cold.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-910_Q4",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is blue. Anne is furry. Anne is green. Anne is quiet. Anne is young. Bob is furry. Bob is round. Erin is green. Erin is young. Harry is furry. Furry people are blue. If someone is furry and young then they are green. All quiet, round people are rough. If Anne is green and Anne is blue then Anne is round. Furry people are quiet. All rough, quiet people are young. Quiet people are round.\nQuestion: Harry is not blue.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-800_Q10",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cow chases the tiger. The cow eats the rabbit. The cow is red. The cow is young. The cow sees the squirrel. The rabbit eats the cow. The rabbit is young. The squirrel is kind. The squirrel is red. The tiger is red. The tiger is young. The tiger sees the squirrel. If the cow sees the squirrel and the squirrel eats the rabbit then the rabbit sees the tiger. If something sees the tiger then the tiger is round. If something chases the squirrel then the squirrel eats the rabbit. If something is round then it sees the tiger. If something is big then it chases the squirrel. If something eats the rabbit then the rabbit chases the squirrel. If the tiger eats the cow and the cow sees the squirrel then the squirrel is young.\nQuestion: The tiger is not round.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-837_Q2",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The mouse chases the tiger. The mouse is cold. The rabbit chases the squirrel. The rabbit is nice. The rabbit needs the mouse. The rabbit needs the tiger. The rabbit visits the mouse. The rabbit visits the tiger. The squirrel chases the mouse. The squirrel is round. The squirrel needs the rabbit. The squirrel needs the tiger. The squirrel does not visit the mouse. The tiger chases the mouse. The tiger is nice. The tiger is not round. If someone visits the rabbit then they visit the tiger. If someone needs the rabbit then they visit the tiger. If the squirrel needs the mouse then the mouse needs the tiger. If someone is cold and they need the tiger then they are nice. If the squirrel needs the rabbit and the rabbit needs the mouse then the squirrel is nice. If someone is round then they need the tiger. If someone is nice then they need the mouse. If someone visits the squirrel then the squirrel is red. If the squirrel does not need the tiger then the tiger needs the squirrel.\nQuestion: The rabbit does not chase the squirrel.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-623_Q9",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is furry. Bob is furry. Fiona is nice. Fiona is red. Gary is blue. Gary is nice. Gary is not young. All white things are young. Red, white things are blue. If something is furry then it is white. If something is red and blue then it is round. If Bob is nice and Bob is white then Bob is round. All white things are red. Round, blue things are not nice. If Fiona is young then Fiona is nice. If Fiona is not blue then Fiona is nice.\nQuestion: Bob is round.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-1166_Q9",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Charlie is cold. Charlie is nice. Dave is cold. Erin is cold. Gary is kind. Gary is not red. Gary is round. All red things are kind. If Erin is cold then Erin is red. All nice things are rough. All cold, white things are rough. All white, round things are nice. Kind, cold things are nice. If something is nice and rough then it is round. All rough things are red. All cold, kind things are red.\nQuestion: Erin is rough.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-111_Q14",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is green. Anne is round. Bob is smart. Charlie is smart. Charlie is young. Harry is blue. Harry is young. Nice people are young. Blue people are young. Young, green people are nice. If someone is smart then they are nice. Round, nice people are big. All big, young people are smart. Green people are blue. If Bob is nice then Bob is blue.\nQuestion: Charlie is blue.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-179_Q16",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is kind. Bob is young. Dave is kind. Dave is red. Fiona is big. Fiona is cold. Fiona is kind. Fiona is smart. Fiona is young. Harry is big. Big, smart people are red. Young, red people are big. If someone is smart then they are red. All big, kind people are rough. Red, big people are kind. If someone is young then they are cold. All kind people are smart. All rough, smart people are young. All big people are smart.\nQuestion: Dave is young.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-609_Q19",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cow likes the lion. The cow likes the mouse. The cow likes the squirrel. The lion eats the mouse. The lion is green. The lion likes the squirrel. The mouse is blue. The mouse likes the cow. The mouse visits the lion. The squirrel visits the cow. If someone visits the cow then they eat the mouse. If someone likes the mouse then they visit the lion. If someone visits the cow then they eat the cow. If someone visits the squirrel and the squirrel is blue then the squirrel likes the cow. If someone is cold then they eat the cow. If someone is green then they are big. If someone is big and green then they like the lion. If someone likes the lion then they are cold. If someone eats the cow then they visit the cow.\nQuestion: The mouse is not nice.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-521_Q16",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is not blue. Anne is cold. Anne is kind. Anne is nice. Anne is quiet. Erin is quiet. Gary is not nice. Gary is rough. Harry is not blue. Harry is cold. Harry is nice. Harry is quiet. If Gary is not nice then Gary is cold. Rough, cold things are blue. If something is kind then it is cold. If something is white and not nice then it is quiet. If something is cold and blue then it is white. All kind, blue things are not white. If something is quiet and rough then it is not kind.\nQuestion: Harry is white.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-808_Q8",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cat is young. The cow is young. The cow visits the mouse. The mouse eats the cat. The mouse needs the cat. The mouse needs the rabbit. The mouse does not visit the cow. The mouse visits the rabbit. The rabbit is round. The rabbit does not need the cat. The rabbit visits the mouse. If someone eats the cat and they eat the cow then they do not need the mouse. If someone visits the cat then the cat eats the cow. All nice people are red. If the mouse needs the rabbit and the mouse eats the cat then the mouse eats the cow. If someone is red and they visit the mouse then the mouse needs the cow. If someone needs the cow then the cow visits the cat. All round people are nice. If someone needs the cat and the cat visits the rabbit then they do not eat the rabbit.\nQuestion: The mouse does not need the cow.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-49_Q6",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is blue. Bob is round. Dave is blue. Dave is green. Dave is kind. Dave is quiet. Gary is blue. Gary is kind. Gary is quiet. Gary is young. Harry is blue. Harry is kind. Harry is quiet. Harry is round. Harry is white. Harry is young. If something is kind then it is quiet. If something is white and quiet then it is round. If something is green then it is white. If Bob is white then Bob is kind. Green, young things are white. If something is young then it is green. All blue, quiet things are round. If something is quiet then it is young. All round things are quiet.\nQuestion: Bob is not young.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-669_Q11",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The dog eats the mouse. The dog eats the tiger. The dog visits the squirrel. The mouse is green. The mouse visits the tiger. The squirrel is big. The squirrel is round. The squirrel likes the dog. The tiger eats the dog. The tiger visits the mouse. If someone eats the tiger and the tiger is big then they are green. If someone is green then they like the squirrel. If the dog is green then the dog likes the mouse. If someone visits the tiger then the tiger is blue. If someone visits the tiger then the tiger visits the dog. If someone is blue and they eat the squirrel then the squirrel is green. If someone is blue then they eat the squirrel. If someone likes the dog and they are green then they are blue.\nQuestion: The squirrel eats the squirrel.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-1020_Q21",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle chases the bear. The bald eagle is green. The bald eagle is round. The bald eagle likes the rabbit. The bald eagle visits the lion. The bear is young. The bear visits the bald eagle. The lion is red. The lion is round. The lion visits the rabbit. The rabbit is blue. The rabbit is red. If someone likes the bear then the bear is blue. If someone likes the lion then the lion likes the rabbit. If someone chases the bear and they visit the lion then the lion likes the bear. If someone visits the bear then they are red. If someone likes the bear and the bear is red then they chase the bear. If someone is red and they chase the rabbit then they are round. If the rabbit likes the bear and the bear likes the lion then the bear is young. If the rabbit visits the bald eagle then the bald eagle is green. If someone is blue then they visit the bear.\nQuestion: The bald eagle does not chase the bald eagle.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-476_Q16",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle is not kind. The bear likes the bald eagle. The bear likes the mouse. The bear needs the squirrel. The mouse is cold. The mouse is kind. The mouse is round. The mouse likes the bald eagle. The mouse likes the bear. The mouse likes the squirrel. The mouse needs the bald eagle. The mouse needs the bear. The mouse needs the squirrel. The mouse sees the bald eagle. The squirrel is kind. The squirrel does not need the bald eagle. If someone sees the squirrel and the squirrel likes the bear then the bear does not need the bald eagle. If someone sees the bald eagle then the bald eagle needs the mouse. If someone sees the mouse then the mouse is blue. If someone likes the mouse and they do not need the bear then the bear likes the mouse. If someone sees the bear and they see the mouse then the bear is blue. If someone sees the squirrel and the squirrel likes the bald eagle then the squirrel sees the mouse. If someone is round then they see the mouse. All kind people are nice. If someone is blue then they see the bear.\nQuestion: The bald eagle sees the bear.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-830_Q7",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is big. Anne is kind. Anne is nice. Anne is round. Anne is smart. Anne is young. Bob is big. Bob is nice. Charlie is big. Charlie is smart. Gary is young. All nice, round things are young. All round, smart things are green. If Charlie is green and Charlie is round then Charlie is nice. All smart things are round. All young, smart things are kind. All young things are big. If something is nice and round then it is smart.\nQuestion: Charlie is nice.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-70_Q12",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is green. Dave is furry. Dave is green. Erin is green. Erin is kind. Erin is young. Fiona is red. Furry, red people are not kind. If someone is red then they are furry. If Fiona is kind then Fiona is not green. If Fiona is green and Fiona is red then Fiona is quiet. If someone is red and not kind then they are nice. If Fiona is green then Fiona is nice. If someone is quiet then they are green. Nice, red people are green. If someone is furry and not nice then they are young.\nQuestion: Fiona is not quiet.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-272_Q6",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is furry. Charlie is big. Charlie is kind. Charlie is round. Erin is big. Erin is kind. Erin is red. Erin is round. Harry is kind. Harry is round. If Harry is kind then Harry is round. Furry, big things are red. All white things are big. All round, red things are white. If Harry is round and Harry is big then Harry is furry. Furry things are quiet. All big, quiet things are furry. All kind things are red.\nQuestion: Charlie is not white.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-259_Q16",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is blue. Erin is quiet. Fiona is big. Fiona is furry. Fiona is nice. Harry is furry. Harry is not rough. Round things are blue. If something is round and not big then it is not nice. Quiet things are nice. All blue, round things are nice. Nice, rough things are round. If something is furry then it is round. Furry, blue things are quiet. Nice things are furry. If something is round and blue then it is not rough.\nQuestion: Anne is quiet.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-998_Q14",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cat likes the dog. The cat likes the rabbit. The cat visits the rabbit. The dog chases the rabbit. The dog likes the rabbit. The dog visits the cat. The lion is green. The lion visits the cat. The lion visits the rabbit. The rabbit chases the cat. The rabbit chases the dog. The rabbit is round. The rabbit likes the dog. The rabbit visits the lion. If something chases the lion and it likes the cat then the cat is blue. If something is kind then it visits the rabbit. If the rabbit is kind then the rabbit visits the cat. If something visits the cat then the cat is blue. If something likes the dog then it is blue. If something chases the lion and it is green then the lion likes the dog. If something is blue and it likes the dog then it is green. If something is kind and it likes the rabbit then the rabbit chases the cat. If something visits the lion and it is green then it chases the lion.\nQuestion: The dog is blue.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-997_Q7",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Charlie is cold. Charlie is nice. Charlie is rough. Charlie is round. Charlie is smart. Dave is round. Dave is white. Fiona is rough. Fiona is smart. Fiona is white. Gary is smart. Rough, round things are cold. All smart things are round. All big, nice things are rough. If Charlie is white then Charlie is nice. If something is nice and smart then it is big. If something is round then it is nice.\nQuestion: Gary is big.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-642_Q10",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is big. Bob is cold. Bob is smart. Bob is young. Charlie is kind. Charlie is young. Erin is big. Erin is cold. Erin is furry. Erin is smart. Gary is furry. Gary is smart. Young things are smart. Furry things are cold. All furry, kind things are rough. All rough things are smart. Cold things are furry. If something is big then it is cold. If Charlie is young and Charlie is smart then Charlie is big.\nQuestion: Charlie is not furry.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-826_Q3",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The dog eats the tiger. The dog is blue. The dog visits the lion. The lion eats the mouse. The lion is rough. The lion is round. The lion visits the tiger. The mouse eats the tiger. The tiger eats the lion. The tiger needs the mouse. The tiger visits the dog. The tiger visits the lion. If someone visits the mouse then they visit the lion. If someone needs the lion then they visit the mouse. If someone visits the tiger then the tiger eats the mouse. If someone eats the mouse and they are blue then they visit the tiger. If someone eats the mouse and the mouse is round then they eat the lion. If someone visits the tiger and the tiger visits the mouse then they visit the dog. If someone is round and they need the lion then the lion is red. If someone visits the lion then the lion visits the mouse. If someone visits the dog then they need the lion.\nQuestion: The tiger eats the mouse.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-468_Q18",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is furry. Anne is green. Bob is green. Bob is quiet. Bob is round. Bob is white. Bob is young. Gary is furry. Gary is white. Harry is smart. Harry is white. If something is quiet and furry then it is green. All smart, white things are quiet. Furry things are smart. If something is round then it is furry. If something is green and white then it is young. If Gary is white and Gary is young then Gary is round.\nQuestion: Anne is white.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-858_Q8",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is smart. Charlie is big. Charlie is green. Charlie is round. Charlie is smart. Charlie is young. Erin is cold. Erin is round. Harry is cold. Harry is round. All cold people are big. Green people are furry. Big people are green. If Erin is furry then Erin is green. If Erin is green then Erin is furry. If someone is smart then they are cold. If Anne is big and Anne is furry then Anne is round. If Harry is round and Harry is young then Harry is furry.\nQuestion: Erin is not furry.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-649_Q4",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Charlie is big. Erin is cold. Erin is kind. Erin is smart. Fiona is big. Gary is blue. Gary is young. All big people are kind. Green people are smart. All blue, young people are smart. If someone is blue and smart then they are cold. Smart, blue people are green. Blue people are green. All kind people are blue.\nQuestion: Gary is not smart.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-669_Q17",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The dog eats the mouse. The dog eats the tiger. The dog visits the squirrel. The mouse is green. The mouse visits the tiger. The squirrel is big. The squirrel is round. The squirrel likes the dog. The tiger eats the dog. The tiger visits the mouse. If someone eats the tiger and the tiger is big then they are green. If someone is green then they like the squirrel. If the dog is green then the dog likes the mouse. If someone visits the tiger then the tiger is blue. If someone visits the tiger then the tiger visits the dog. If someone is blue and they eat the squirrel then the squirrel is green. If someone is blue then they eat the squirrel. If someone likes the dog and they are green then they are blue.\nQuestion: The dog is not green.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-897_Q10",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle chases the tiger. The bald eagle is big. The bald eagle is green. The cow is big. The cow is young. The cow likes the tiger. The rabbit is round. The rabbit needs the cow. The rabbit needs the tiger. The tiger likes the cow. If someone likes the tiger and the tiger is green then they chase the rabbit. If someone is green then they chase the cow. If someone chases the rabbit and they like the tiger then the tiger needs the cow. If someone is big and they chase the bald eagle then the bald eagle needs the tiger. If someone is green and they chase the cow then they need the cow. If someone is big and they need the cow then the cow is green.\nQuestion: The cow does not chase the cow.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-741_Q8",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Dave is big. Dave is blue. Dave is cold. Dave is rough. Dave is smart. Dave is white. Dave is young. Erin is big. Erin is cold. Erin is smart. Erin is white. Erin is young. Fiona is big. Fiona is blue. Fiona is rough. Harry is smart. All blue, cold things are rough. Cold, white things are big. If Erin is white then Erin is young. If something is smart then it is young. Young things are cold. If Harry is rough then Harry is big. If something is cold then it is blue. If something is rough and big then it is blue. White, cold things are young.\nQuestion: Harry is not blue.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-776_Q7",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear does not chase the cat. The bear eats the cat. The bear eats the cow. The bear is green. The bear is not nice. The bear sees the dog. The cat is nice. The cat is red. The cat sees the bear. The cow eats the dog. The dog is kind. If someone is kind and they see the dog then the dog chases the cow. If someone eats the bear and the bear chases the dog then the dog eats the cow. If someone sees the bear then they see the cow. If someone sees the cat and the cat sees the bear then they eat the dog. If someone is nice and they eat the cow then the cow does not chase the cat. If someone sees the cow then they see the cat. If someone is green then they see the bear. If someone eats the dog then they are red.\nQuestion: The cat eats the dog.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-450_Q22",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle chases the lion. The bald eagle is not green. The bald eagle is round. The bald eagle likes the lion. The dog is red. The lion does not chase the dog. The lion is round. The lion is not young. The rabbit chases the dog. The rabbit eats the lion. If something chases the dog then it likes the rabbit. If something is red and it chases the lion then the lion likes the bald eagle. If something is big then it chases the rabbit. If something is round and it chases the bald eagle then the bald eagle does not like the dog. If something likes the lion then it is red. If something is red and round then it does not chase the bald eagle. If something is red and young then it chases the bald eagle. If something likes the bald eagle and the bald eagle chases the lion then it likes the lion. If something eats the bald eagle then the bald eagle is red.\nQuestion: The bald eagle is young.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-1389_Q2",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Charlie is rough. Charlie is white. Erin is blue. Erin is rough. Erin is young. Gary is blue. Gary is green. Gary is quiet. Gary is white. Harry is blue. Harry is rough. All rough, white things are green. All young, blue things are quiet. If something is young then it is blue. White, blue things are quiet. If something is green then it is young. Quiet, green things are cold. All green, cold things are rough.\nQuestion: Gary is not green.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-29_Q9",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cat eats the rabbit. The cow eats the rabbit. The cow is green. The cow needs the cat. The cow needs the lion. The cow sees the lion. The lion is blue. The rabbit eats the cow. The rabbit is nice. The rabbit sees the lion. If something eats the rabbit then the rabbit is blue. If something eats the cow and it sees the lion then it sees the rabbit. If something is big then it eats the cat. If something is nice and it eats the cat then the cat sees the rabbit. If something is green and it needs the cow then it sees the cat. If something sees the cat then it eats the cat. If something sees the rabbit then it sees the cat. If something eats the cow and the cow needs the rabbit then it eats the rabbit.\nQuestion: The cat sees the rabbit.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-623_Q5",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is furry. Bob is furry. Fiona is nice. Fiona is red. Gary is blue. Gary is nice. Gary is not young. All white things are young. Red, white things are blue. If something is furry then it is white. If something is red and blue then it is round. If Bob is nice and Bob is white then Bob is round. All white things are red. Round, blue things are not nice. If Fiona is young then Fiona is nice. If Fiona is not blue then Fiona is nice.\nQuestion: Bob is red.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-656_Q12",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is smart. Charlie is not blue. Charlie is quiet. Erin is not nice. Erin is round. Harry is green. Harry is young. Smart things are green. If Anne is round then Anne is young. If something is blue and green then it is not quiet. If something is green and smart then it is round. If something is young then it is blue. Smart things are nice. If Harry is quiet and Harry is not smart then Harry is young.\nQuestion: Anne is quiet.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-901_Q4",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Dave is rough. Erin is green. Erin is nice. Fiona is not rough. Gary is blue. Gary is nice. Gary is rough. If someone is round and not rough then they are nice. If someone is green then they are big. All round people are green. If someone is rough then they are kind. Rough, green people are kind. Green, big people are blue. All kind people are round.\nQuestion: Erin is not big.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-368_Q15",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle eats the cat. The bald eagle eats the dog. The bald eagle is not green. The bald eagle is not kind. The bald eagle does not like the dog. The bald eagle sees the cat. The bald eagle does not see the dog. The cat is blue. The cat is round. The dog eats the bald eagle. The dog eats the cat. The dog is round. The dog likes the cat. The lion eats the bald eagle. The lion eats the cat. The lion does not see the cat. If the dog sees the cat then the dog likes the bald eagle. If something is round then it likes the lion. If the cat likes the bald eagle and the lion does not see the cat then the lion is kind. If something is kind then it is round. If something likes the lion then it likes the bald eagle. If something eats the lion then it likes the bald eagle.\nQuestion: The bald eagle does not like the lion.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-262_Q13",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is blue. Anne is nice. Anne is red. Anne is rough. Anne is round. Anne is smart. Bob is blue. Dave is blue. Dave is rough. Dave is smart. Harry is blue. Harry is furry. If something is furry then it is round. If Anne is red and Anne is nice then Anne is rough. If something is red and round then it is smart. All round things are furry. All blue, round things are red. Blue things are nice. All nice, blue things are furry. All red things are smart.\nQuestion: Bob is not rough.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-688_Q17",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cat is nice. The cat is red. The cat is round. The cat does not need the mouse. The cat visits the squirrel. The lion needs the mouse. The mouse is round. The mouse likes the lion. The mouse needs the lion. The mouse visits the cat. The squirrel is big. The squirrel is red. The squirrel visits the lion. The squirrel visits the mouse. If something likes the cat and it does not visit the cat then it visits the lion. If the lion is green and the lion visits the mouse then the mouse is red. All red things are nice. If something likes the lion then it is red. If the mouse visits the cat and the mouse needs the squirrel then the mouse does not like the cat. Nice things are big. If something is big then it visits the squirrel. If the mouse visits the squirrel then the mouse does not visit the lion.\nQuestion: The lion is not nice.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-1298_Q1",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is green. Anne is nice. Anne is red. Anne is smart. Anne is white. Bob is green. Bob is nice. Bob is round. Bob is white. Dave is round. Gary is green. Gary is nice. Gary is red. Gary is white. Green, red things are smart. Round things are cold. Cold, smart things are round. All smart things are cold. Red, white things are nice. All cold, round things are green. White, green things are red. All green things are smart. All smart things are white.\nQuestion: Bob is nice.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-299_Q14",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is green. Bob is young. Charlie is round. Charlie is young. Erin is kind. Erin is white. Erin is young. Fiona is cold. Fiona is not green. Fiona is kind. Fiona is quiet. All round things are cold. If something is young then it is cold. If something is green and white then it is round. All kind, white things are quiet. Round, quiet things are white. Green, young things are white. If something is cold then it is kind. If something is round and kind then it is green.\nQuestion: Erin is green.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-263_Q4",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear is nice. The bear likes the cat. The bear likes the tiger. The cat eats the bear. The cat is cold. The cat is kind. The cat likes the rabbit. The cat visits the rabbit. The rabbit likes the tiger. The rabbit visits the tiger. The tiger eats the bear. The tiger likes the bear. If someone is kind and they visit the cat then they are big. If someone is young then they eat the cat. If someone is cold and they like the rabbit then the rabbit likes the cat. If someone likes the tiger then the tiger visits the cat. If someone is big then they eat the tiger. If someone eats the rabbit and they are cold then they visit the rabbit. If someone likes the bear then they are kind. If someone likes the rabbit and they eat the rabbit then the rabbit visits the cat. If someone eats the tiger and the tiger visits the cat then they are young.\nQuestion: The rabbit does not like the cat.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-1204_Q8",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is not furry. Bob is quiet. Bob is not rough. Bob is not round. Erin is not kind. Erin is rough. Gary is big. Harry is furry. Harry is green. Harry is not round. All big, round people are rough. If someone is rough and not green then they are quiet. If someone is round and rough then they are quiet. All big people are round. All quiet people are kind. All rough, quiet people are big. If someone is round and kind then they are furry. If someone is big and not quiet then they are furry.\nQuestion: Gary is not quiet.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-579_Q12",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is not green. Anne is rough. Bob is white. Dave is red. Dave is young. Gary is red. Gary is white. If something is red then it is furry. If something is furry then it is young. White, red things are rough. All white, furry things are big. Rough things are red. Red, young things are white.\nQuestion: Anne is not big.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-534_Q7",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cow likes the rabbit. The cow needs the mouse. The mouse likes the squirrel. The rabbit needs the cow. The rabbit sees the cow. The squirrel is nice. The squirrel needs the cow. If someone needs the mouse and they need the rabbit then the rabbit needs the cow. If someone sees the rabbit then the rabbit needs the mouse. If someone needs the cow then they like the squirrel. If someone sees the squirrel then they see the rabbit. If someone is kind and they see the squirrel then they need the mouse. If someone likes the squirrel and the squirrel sees the cow then they are red. If someone needs the mouse then they see the squirrel.\nQuestion: The rabbit needs the mouse.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-855_Q1",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cat is red. The cat visits the dog. The cat visits the mouse. The dog needs the cat. The dog needs the mouse. The mouse likes the cat. The mouse likes the squirrel. The squirrel is rough. The squirrel likes the cat. The squirrel likes the mouse. The squirrel visits the mouse. If something needs the dog then it needs the mouse. If something visits the dog then the dog is rough. If something is green and it likes the cat then it is rough. If something is green then it likes the cat. If something is rough then it visits the cat. If something visits the cat then the cat is green. If something likes the dog and it likes the cat then the dog is blue. If something likes the mouse and the mouse is green then it likes the squirrel.\nQuestion: The squirrel is rough.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-461_Q3",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear eats the cat. The bear is nice. The bear is rough. The bear likes the cat. The bear visits the dog. The cat visits the bear. The dog eats the cat. The dog is blue. The dog is green. The mouse eats the bear. The mouse visits the bear. If someone eats the cat then they visit the cat. If someone eats the cat then they eat the mouse. If someone visits the dog and the dog likes the cat then the dog is nice. If someone likes the mouse then they eat the cat. If the dog is nice then the dog visits the mouse. If someone eats the mouse and the mouse eats the bear then they like the cat. If the bear likes the dog then the dog visits the bear. If someone is rough then they visit the cat. If the dog visits the mouse and the dog visits the cat then the mouse eats the dog.\nQuestion: The bear visits the cat.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-48_Q10",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear chases the cat. The bear chases the squirrel. The bear is young. The bear does not see the squirrel. The cat chases the cow. The cat chases the squirrel. The cat eats the squirrel. The cat is not kind. The cat does not see the cow. The cow does not chase the cat. The cow chases the squirrel. The squirrel chases the bear. The squirrel eats the cat. The squirrel eats the cow. The squirrel is young. The squirrel sees the cow. If something eats the bear then the bear sees the cow. If something is kind then it eats the bear. If the cow chases the bear and the cat does not chase the cow then the cow sees the squirrel. If something sees the squirrel then it is rough. If something eats the bear and it does not chase the cat then the cat sees the bear. If something sees the cow then it is kind. If something eats the squirrel then it eats the cat.\nQuestion: The bear is not kind.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-1199_Q6",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is blue. Anne is furry. Anne is kind. Anne is nice. Anne is red. Bob is furry. Bob is kind. Bob is nice. Bob is red. Erin is white. Gary is kind. All white, furry things are red. Kind, nice things are big. Big, nice things are furry. All kind things are white. If Gary is blue and Gary is white then Gary is red. All nice, kind things are white. If something is white then it is nice. If Bob is white then Bob is nice. If something is furry and blue then it is red.\nQuestion: Gary is not nice.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-71_Q3",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear eats the squirrel. The mouse eats the squirrel. The mouse visits the bear. The mouse visits the rabbit. The rabbit sees the mouse. The rabbit sees the squirrel. The squirrel is big. The squirrel is rough. The squirrel sees the bear. The squirrel visits the mouse. The squirrel visits the rabbit. If the bear visits the squirrel then the squirrel eats the rabbit. If something eats the squirrel and it sees the bear then the bear eats the rabbit. If something is kind then it is blue. If something is rough and it visits the rabbit then it eats the mouse. If the bear visits the squirrel then the squirrel is big. If something is big and it eats the mouse then the mouse is kind. If something is blue then it sees the bear. If something sees the mouse then it eats the bear.\nQuestion: The squirrel eats the mouse.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-215_Q13",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle is nice. The bald eagle likes the cat. The bald eagle visits the rabbit. The cat is green. The cat likes the rabbit. The cat visits the rabbit. The dog likes the rabbit. The dog visits the rabbit. The rabbit needs the dog. The rabbit visits the cat. If something visits the rabbit then it needs the dog. All young things are blue. If something visits the bald eagle and it needs the rabbit then the rabbit likes the bald eagle. If something visits the cat then it is nice. If something needs the dog then it likes the bald eagle. If something is green then it visits the cat. If something needs the cat then it needs the rabbit. If something visits the bald eagle and the bald eagle is red then it visits the rabbit. If something likes the bald eagle then it is green.\nQuestion: The bald eagle does not need the rabbit.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-740_Q10",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is big. Anne is young. Charlie is blue. Charlie is kind. Charlie is round. Charlie is young. Gary is big. Harry is big. Harry is blue. Harry is kind. Harry is nice. Harry is smart. All smart things are big. All kind, smart things are round. All young, kind things are blue. All nice, young things are smart. If something is big then it is kind. If something is blue then it is nice. If Anne is nice and Anne is kind then Anne is smart. If Gary is nice then Gary is young. If something is round and big then it is blue.\nQuestion: Anne is not smart.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-183_Q1",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is not cold. Anne is rough. Bob is round. Erin is rough. Erin is round. Gary is furry. Gary is green. All nice things are green. Furry things are green. If something is green and not round then it is white. Cold, round things are nice. If Bob is furry then Bob is white. Round things are cold. If Anne is white then Anne is furry. All nice things are rough. Rough things are furry.\nQuestion: Erin is round.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-354_Q3",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The dog likes the mouse. The dog likes the squirrel. The mouse eats the dog. The squirrel is cold. The squirrel is green. The squirrel likes the tiger. The tiger eats the squirrel. If something sees the squirrel then the squirrel eats the tiger. If something is cold then it sees the squirrel. If something likes the squirrel then the squirrel likes the dog. If something sees the mouse then the mouse eats the squirrel. If something sees the squirrel then it is kind. If something likes the dog and it eats the mouse then the mouse is cold. If something eats the dog and the dog eats the mouse then the dog sees the tiger. If something is kind then it eats the mouse.\nQuestion: The squirrel likes the dog.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-744_Q18",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle sees the cat. The cat is round. The cat needs the rabbit. The cat sees the lion. The cat visits the lion. The lion is big. The lion is cold. The lion is nice. The lion visits the rabbit. The rabbit is nice. The rabbit is round. The rabbit sees the cat. If something is nice then it is big. If something is kind and it sees the rabbit then it needs the lion. If something needs the rabbit then it is nice. All cold, big things are kind. If something sees the bald eagle and the bald eagle is nice then it needs the rabbit. If something sees the lion then it visits the rabbit. If the bald eagle sees the cat then the bald eagle visits the rabbit. If something visits the rabbit then it needs the rabbit. If something is big then it is cold.\nQuestion: The lion needs the lion.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-25_Q11",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear chases the lion. The bear chases the mouse. The bear is red. The bear is round. The bear needs the squirrel. The lion eats the bear. The lion is kind. The lion needs the bear. The mouse is round. The squirrel chases the bear. If something eats the bear and the bear eats the lion then the lion is round. If something chases the lion then the lion eats the squirrel. If something is red then it needs the lion. If something eats the squirrel and the squirrel eats the mouse then it chases the lion. If the bear is blue and the bear needs the mouse then the mouse eats the lion. If something eats the lion and it is round then the lion is red. If something needs the lion then it eats the lion.\nQuestion: The lion eats the lion.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-375_Q11",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle eats the dog. The bald eagle eats the tiger. The cat needs the bald eagle. The cat needs the dog. The cat sees the dog. The dog eats the tiger. The dog is red. The tiger is red. The tiger needs the bald eagle. The tiger needs the cat. If someone needs the tiger then the tiger needs the dog. If someone eats the cat and the cat sees the tiger then the cat eats the tiger. If someone needs the dog then the dog needs the tiger. Blue people are red. If someone is red and they see the bald eagle then the bald eagle is big. Red people are young. If someone sees the tiger then they see the cat. If someone needs the dog then they are blue. If someone is blue and young then they see the bald eagle.\nQuestion: The bald eagle is big.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-201_Q2",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cat needs the mouse. The cat sees the squirrel. The cat does not see the tiger. The mouse is red. The mouse does not visit the cat. The squirrel is big. The squirrel visits the tiger. The tiger is big. The tiger sees the mouse. The tiger visits the squirrel. If someone visits the tiger and the tiger needs the mouse then the mouse sees the squirrel. If someone is blue and red then they need the tiger. If someone needs the tiger then the tiger needs the mouse. If someone visits the squirrel then they are not blue. Red people are blue. If someone needs the cat and they are not big then they do not visit the squirrel. If someone sees the squirrel then they need the mouse.\nQuestion: The mouse visits the cat.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-27_Q2",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cat chases the cow. The cat chases the mouse. The cat is nice. The cat is red. The cat is rough. The cat needs the lion. The cat does not need the mouse. The cat visits the mouse. The cow does not chase the cat. The cow is big. The lion chases the cat. The lion chases the cow. The lion is young. The lion visits the cow. The mouse is big. The mouse is rough. If someone needs the lion then the lion does not need the mouse. If someone visits the cat then they are not big. If someone is rough then they visit the mouse. If the cow visits the lion and the cow is big then the lion does not need the cat. If someone visits the mouse then they are red. If someone chases the cow and they do not need the mouse then the cow is rough. If someone is red then they visit the lion. If someone is red and they chase the lion then the lion is red. If someone chases the mouse and they are red then the mouse needs the cat.\nQuestion: The cow chases the cat.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-174_Q13",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is green. Anne is round. Dave is red. Gary is green. Gary is young. Harry is red. Harry is young. All furry, young people are not green. All young, round people are blue. If someone is red and kind then they are round. Green, kind people are round. If someone is green and round then they are kind. All red people are kind. All furry people are red. All blue, young people are furry. If Anne is young then Anne is kind.\nQuestion: Anne is not red.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-874_Q5",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Bob is furry. Bob is not white. Fiona is rough. Gary is not big. Gary is rough. Gary is white. Harry is big. Harry is cold. Harry is furry. Harry is kind. Harry is rough. If Fiona is white then Fiona is kind. If something is big then it is not blue. If something is cold then it is kind. All white, furry things are big. All kind things are white. If something is rough then it is white. Kind, blue things are white. If something is white and kind then it is furry.\nQuestion: Fiona is kind.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-865_Q5",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is big. Anne is round. Dave is nice. Dave is rough. Fiona is rough. Gary is blue. Gary is furry. If Anne is rough then Anne is not furry. If Fiona is quiet then Fiona is big. If something is blue and not rough then it is not round. If something is nice and round then it is quiet. If Fiona is big and Fiona is nice then Fiona is round. If something is round then it is blue. Furry things are nice. All nice things are big. If something is rough then it is furry.\nQuestion: Fiona is nice.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-279_Q2",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear is blue. The bear is round. The bear sees the cow. The cow is blue. The lion is rough. The lion likes the tiger. The lion sees the bear. The tiger is cold. The tiger is round. The tiger sees the bear. The tiger sees the cow. If someone is blue then they like the tiger. If the cow is blue then the cow chases the lion. If someone likes the tiger and the tiger sees the bear then they chase the lion. If someone likes the lion then the lion chases the tiger. If the cow is cold and the cow chases the bear then the bear chases the tiger. If someone chases the cow and they chase the lion then they chase the bear. If someone is rough then they chase the cow. If someone is cold then they are blue. If someone is blue and they chase the lion then they are rough.\nQuestion: The bear does not see the cow.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-707_Q10",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bear is big. The bear is blue. The bear is nice. The bear likes the mouse. The bear visits the lion. The bear visits the squirrel. The lion is blue. The mouse is cold. The mouse is green. The mouse visits the squirrel. The squirrel visits the lion. If something is cold and it visits the lion then it likes the squirrel. If something visits the squirrel then it likes the squirrel. If something eats the mouse and it visits the lion then it eats the bear. If something likes the squirrel then it likes the bear. If something likes the mouse and the mouse is blue then the mouse is nice. If something likes the lion then it is blue. If the mouse likes the bear then the mouse likes the lion.\nQuestion: The mouse is not blue.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-617_Q6",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle is round. The bald eagle sees the bear. The bald eagle sees the dog. The bald eagle sees the squirrel. The bald eagle visits the dog. The bald eagle visits the squirrel. The bear is young. The bear needs the squirrel. The bear sees the squirrel. The dog is nice. The dog sees the bald eagle. The dog sees the bear. The dog visits the bald eagle. The squirrel is red. The squirrel is round. The squirrel needs the dog. If something visits the dog then the dog needs the squirrel. If something sees the squirrel and it is blue then the squirrel visits the dog. If something is blue then it visits the bear. If something sees the squirrel and the squirrel visits the bear then it visits the bald eagle. Round things are red. If something visits the dog and the dog sees the bald eagle then it is blue. If something is young and it sees the bald eagle then the bald eagle needs the bear. If something visits the bear then the bear sees the squirrel.\nQuestion: The squirrel does not visit the dog.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-893_Q2",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle is big. The bald eagle sees the lion. The bald eagle visits the rabbit. The lion eats the bald eagle. The lion is blue. The lion is cold. The lion visits the bald eagle. The lion visits the rabbit. The rabbit eats the tiger. The rabbit is big. The rabbit sees the bald eagle. The rabbit visits the tiger. The tiger is red. The tiger visits the bald eagle. If someone eats the bald eagle then the bald eagle visits the lion. If someone visits the bald eagle and the bald eagle sees the rabbit then the rabbit is red. If the lion is blue then the lion sees the tiger. If someone is big then they are cold. If someone is red then they visit the lion. If someone eats the bald eagle then they see the bald eagle. If someone eats the tiger and the tiger sees the lion then they visit the lion. If someone eats the lion and the lion sees the rabbit then the rabbit sees the bald eagle. If someone visits the lion and the lion sees the tiger then they see the rabbit.\nQuestion: The tiger is not red.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-1175_Q9",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is rough. Bob is furry. Dave is big. Dave is nice. Dave is rough. Fiona is furry. Fiona is nice. If someone is smart and cold then they are nice. If someone is smart then they are cold. Rough, nice people are red. If someone is rough then they are smart. If Fiona is red then Fiona is big. All furry people are rough. If someone is big then they are rough.\nQuestion: Anne is red.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-1012_Q3",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cow chases the lion. The cow is big. The cow is nice. The cow likes the squirrel. The cow sees the squirrel. The dog is blue. The dog is rough. The dog likes the cow. The dog sees the lion. The lion is big. The lion likes the cow. The lion sees the dog. The lion sees the squirrel. The squirrel sees the dog. If someone is nice then they are blue. If someone sees the lion then they chase the cow. If someone likes the squirrel and they see the lion then the squirrel likes the lion. If someone is blue and they like the cow then the cow is big. All blue people are young. If someone likes the lion and they chase the cow then the cow chases the lion. If someone chases the cow and the cow chases the lion then they like the squirrel. If someone likes the lion then they are blue.\nQuestion: The cow is blue.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-976_Q4",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Charlie is not quiet. Erin is big. Erin is white. Erin is young. Gary is young. Harry is furry. Harry is nice. White, furry people are big. All nice people are big. If someone is quiet and furry then they are white. If someone is young then they are quiet. All big, furry people are round. If someone is quiet then they are furry. If Erin is round then Erin is quiet.\nQuestion: Harry is not big.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-41_Q22",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle sees the lion. The cow eats the lion. The cow eats the mouse. The cow sees the mouse. The lion is kind. The lion needs the mouse. The lion sees the bald eagle. The mouse is kind. The mouse needs the cow. The mouse needs the lion. The mouse sees the bald eagle. The mouse sees the cow. If someone is big then they eat the cow. If someone is blue then they see the mouse. If someone is cold and they see the mouse then they eat the cow. If someone is cold then they eat the mouse. If someone needs the mouse and the mouse eats the cow then the cow needs the lion. All cold people are big. If the lion eats the bald eagle then the bald eagle sees the lion. If the mouse is kind then the mouse needs the bald eagle. If someone needs the lion then they are cold.\nQuestion: The cow sees the lion.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-1213_Q23",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is white. Bob is round. Erin is green. Erin is red. Erin is not round. Erin is white. Harry is young. All red, round people are quiet. If someone is young then they are white. Round people are young. If someone is round and smart then they are not red. All white people are red. Quiet people are green. If someone is red and not white then they are not green.\nQuestion: Anne is not smart.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-368_Q14",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle eats the cat. The bald eagle eats the dog. The bald eagle is not green. The bald eagle is not kind. The bald eagle does not like the dog. The bald eagle sees the cat. The bald eagle does not see the dog. The cat is blue. The cat is round. The dog eats the bald eagle. The dog eats the cat. The dog is round. The dog likes the cat. The lion eats the bald eagle. The lion eats the cat. The lion does not see the cat. If the dog sees the cat then the dog likes the bald eagle. If something is round then it likes the lion. If the cat likes the bald eagle and the lion does not see the cat then the lion is kind. If something is kind then it is round. If something likes the lion then it likes the bald eagle. If something eats the lion then it likes the bald eagle.\nQuestion: The bald eagle likes the bald eagle.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-924_Q11",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is red. Anne is white. Bob is furry. Bob is red. Fiona is big. Fiona is furry. Fiona is green. Gary is cold. Gary is furry. Gary is green. Green, furry people are nice. All green, nice people are big. Big, green people are furry. All furry people are nice. All big, green people are furry. Big, red people are cold. If someone is nice and red then they are green. Big, cold people are white. If someone is green and cold then they are big.\nQuestion: Bob is white.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-422_Q6",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Charlie is big. Charlie is green. Charlie is nice. Charlie is not quiet. Dave is big. Dave is quiet. Fiona is not rough. Gary is big. Gary is green. Gary is nice. Gary is rough. If someone is quiet and rough then they are nice. Big people are nice. If Charlie is kind and Charlie is nice then Charlie is not big. If someone is rough and nice then they are green. All green, rough people are red. If Dave is kind then Dave is rough. If someone is nice and quiet then they are kind. If Fiona is quiet and Fiona is rough then Fiona is big.\nQuestion: Dave is not kind.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-889_Q15",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The cat is red. The cat does not like the lion. The dog is nice. The dog is red. The dog is young. The lion likes the dog. The mouse is not round. The mouse likes the cat. The mouse likes the dog. The mouse needs the dog. The mouse visits the cat. The mouse visits the lion. If someone likes the lion then the lion likes the cat. All nice people are round. If someone likes the dog and the dog needs the lion then the lion is nice. If someone is round then they need the lion. If someone likes the lion and they need the mouse then the mouse is kind. If someone likes the dog and they are not red then they do not need the dog. If the dog is red then the dog likes the mouse. If the cat needs the dog and the cat does not need the lion then the dog does not visit the mouse.\nQuestion: The cat does not need the lion.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-954_Q22",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The lion needs the rabbit. The mouse is rough. The mouse is young. The mouse visits the lion. The rabbit needs the mouse. The rabbit needs the squirrel. The squirrel is not blue. If something is young then it needs the lion. If something is round then it needs the lion. If something needs the lion then it needs the rabbit. If something is rough and it visits the mouse then the mouse is red. If the rabbit visits the squirrel and the squirrel chases the lion then the squirrel needs the rabbit. If something is red then it is not blue. If something is young and it does not need the mouse then it visits the rabbit. If something needs the rabbit then it visits the mouse. If the lion visits the mouse and the lion is blue then the mouse chases the squirrel.\nQuestion: The squirrel chases the squirrel.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-254_Q14",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle visits the cow. The cow chases the rabbit. The cow does not visit the dog. The dog is not big. The dog is young. The rabbit sees the dog. The rabbit visits the cow. If someone sees the dog then they visit the dog. If someone visits the bald eagle and they are round then the bald eagle chases the cow. If someone is round then they see the rabbit. If someone sees the rabbit then the rabbit is round. If someone chases the dog then the dog visits the bald eagle. If the dog is young then the dog does not visit the bald eagle. If someone visits the dog then the dog is round. If the dog is nice then the dog sees the cow. If the rabbit sees the bald eagle and the bald eagle chases the cow then the cow sees the bald eagle.\nQuestion: The bald eagle visits the dog.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-1129_Q15",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is big. Anne is quiet. Anne is not smart. Bob is blue. Bob is quiet. Dave is blue. Fiona is big. Fiona is cold. Fiona is quiet. Fiona is smart. Smart people are big. Blue, red people are big. If someone is cold and not blue then they are red. All cold people are smart. Blue people are cold. If Bob is big and Bob is cold then Bob is not red. If someone is smart and not red then they are white.\nQuestion: Dave is not white.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_RelNoneg-OWA-D5-722_Q7",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle eats the lion. The bald eagle eats the tiger. The bald eagle is big. The bald eagle is round. The bald eagle likes the lion. The cow eats the lion. The cow likes the bald eagle. The cow sees the tiger. The lion eats the cow. The tiger eats the lion. The tiger is red. If someone eats the cow then the cow sees the bald eagle. If someone likes the bald eagle and they eat the bald eagle then they like the cow. If someone likes the lion and the lion is cold then they see the bald eagle. All young people are cold. If someone likes the bald eagle and they see the bald eagle then the bald eagle is red. If someone is red then they eat the bald eagle. If someone eats the lion then they like the bald eagle. If someone likes the cow then they like the tiger. If the lion sees the cow then the cow eats the tiger.\nQuestion: The tiger likes the tiger.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNoneg-OWA-D5-1346_Q8",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is furry. Anne is quiet. Anne is red. Charlie is quiet. Dave is furry. Fiona is furry. Fiona is red. All big people are rough. If Fiona is big then Fiona is red. All young, red people are quiet. Red people are furry. All rough people are young. If someone is big then they are quiet. Quiet people are big. If Charlie is furry and Charlie is big then Charlie is quiet. Young people are red.\nQuestion: Anne is not young.",
+        "output":"False"
+    },
+    {
+        "id":"ProofWriter_test_RelNeg-OWA-D5-373_Q19",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: The bald eagle does not chase the cow. The bald eagle eats the tiger. The bald eagle is kind. The cat chases the cow. The cat eats the bald eagle. The cow chases the bald eagle. The cow chases the cat. The cow eats the bald eagle. The cow eats the cat. The cow is not kind. The cow is red. The tiger is not big. The tiger is rough. The tiger does not visit the cat. If someone eats the cat and they do not eat the tiger then the tiger does not chase the cat. If someone is kind and they visit the cow then they do not visit the tiger. If someone chases the cat then they visit the tiger. If someone visits the tiger then they visit the bald eagle. If the tiger eats the bald eagle then the tiger eats the cow. If someone visits the tiger and they visit the bald eagle then the bald eagle chases the cat.\nQuestion: The cat does not visit the cat.",
+        "output":"Unknown"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-708_Q1",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Charlie is furry. Erin is furry. Erin is young. Gary is furry. Gary is nice. Gary is red. Harry is red. Nice people are cold. All kind people are not red. If Charlie is rough and Charlie is furry then Charlie is red. All cold people are furry. If Erin is cold then Erin is kind. If someone is young then they are rough. If someone is rough then they are nice.\nQuestion: Gary is nice.",
+        "output":"True"
+    },
+    {
+        "id":"ProofWriter_test_AttNeg-OWA-D5-884_Q11",
+        "instruction":"Given a context, answer the question as True, False or Unknown",
+        "input":"Context: Anne is not furry. Anne is white. Bob is blue. Bob is cold. Bob is young. Erin is blue. Harry is not young. If someone is rough then they are cold. If someone is rough then they are white. If Harry is red then Harry is cold. All white people are red. Red, rough people are young. If someone is blue then they are rough. If Anne is not red then Anne is young. Cold, young people are not furry.\nQuestion: Erin is not furry.",
+        "output":"True"
+    }
+]
