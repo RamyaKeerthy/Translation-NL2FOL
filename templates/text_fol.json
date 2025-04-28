@@ -1,0 +1,6 @@
+{
+    "description": "Template used for fol generation..",
+    "prompt_input": "{instruction}\n{input}\nOutput:",
+    "prompt_no_input": "{instruction}\nOutput:",
+    "response_split": "Output:"    
+}

@@ -1,0 +1,6 @@
+{
+    "description": "Template used for standard generation",
+    "prompt_input": "{instruction} {input}\nOutput:",
+    "prompt_no_input": "{instruction}\nOutput:",
+    "response_split": "Output:"    
+}
